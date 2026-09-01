@@ -1,0 +1,75 @@
+{
+  "compilerOptions": {
+    /* --- Target Environment --- */
+    // Specify what JSX code is generated (Not needed unless using React/JSX)
+    // "jsx": "preserve",
+    
+    // Specify ECMAScript target version. ES2022 matches modern Node.js features.
+    "target": "ES2022",
+    
+    // Sets the module system for the program. 'NodeNext' is standard for modern Node.
+    "module": "NodeNext",
+    
+    // Determines how TypeScript looks up a file from a given module specifier.
+    "moduleResolution": "NodeNext",
+    
+    // Specify a set of bundled library declaration files that describe the target runtime environment.
+    "lib": ["ES2022"],
+
+    /* --- Strictness & Code Quality --- */
+    // Enable all strict type-checking options at once.
+    "strict": true,
+    
+    // Raise error on expressions and declarations with an implied 'any' type.
+    "noImplicitAny": true,
+    
+    // When type checking, take into account 'null' and 'undefined'.
+    "strictNullChecks": true,
+    
+    // Report errors on unused local variables.
+    "noUnusedLocals": true,
+    
+    // Report errors on unused parameters in functions.
+    "noUnusedParameters": true,
+    
+    // Report error when not all code paths in a function return a value.
+    "noImplicitReturns": true,
+
+    /* --- JavaScript & Interop Support --- */
+    // Allow JavaScript files to be imported and type-checked inside your project.
+    "allowJs": true,
+    
+    // Enable type checking on frontend/backend JavaScript files (set to true if desired).
+    "checkJs": false,
+    
+    // Emit additional JavaScript to ease support for importing CommonJS modules.
+    "esModuleInterop": true,
+    
+    // Skip type checking of declaration files (*.d.ts) to speed up compilation.
+    "skipLibCheck": true,
+    
+    // Ensure that casing is correct in imports (e.g., 'File.ts' vs 'file.ts').
+    "forceConsistentCasingInFileNames": true,
+
+    "types" : [
+      "node"
+    ],
+
+    /* --- Build Artifacts --- */
+    // Redirect output structure to the directory.
+    "outDir": "./dist",
+    
+    // Create source map files for emitted JavaScript files so you can debug original TS code.
+    "sourceMap": true,
+    
+    // Do not emit comments to the compiled JavaScript files output.
+    "removeComments": true
+  },
+  
+  /* --- Inclusion & Exclusion Rules --- */
+  // Specifies the files or directories to be included in the compilation.
+  "include": ["src/**/*"],
+  
+  // Specifies the files or directories to be skipped during compilation.
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"]
+}

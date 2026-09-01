@@ -1,0 +1,25 @@
+{
+  "name": "udemy_mean_stack",
+  "version": "1.0.0",
+  "description": "- Node Js is a javascript run time environment, which will use for our server side code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "01" : "tsx watch src/01-process-objects.ts",
+    "dev": "tsx watch index.ts",
+    "migration": "",
+    "unit" : "",
+    "e2e" : ""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^26.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.3.0",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
+  }
+}
