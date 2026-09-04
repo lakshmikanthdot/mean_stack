@@ -51,4 +51,4 @@ function runApp(): void {
   }
 }
 runApp();
-console.log("test commit")
+console.log("test commit test")
