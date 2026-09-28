@@ -48,7 +48,7 @@ function runApp(): void {
   if (shouldCrash) {
     console.error(" `Manual crash triggered with --crash flag");
     process.exit(1);
-    // process.exit(5);
+    // process.exit(7);
   }
 }
 runApp();
