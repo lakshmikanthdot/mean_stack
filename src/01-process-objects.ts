@@ -22,6 +22,11 @@ const nodeEnv = process.env.NODE_ENV ?? "development";
 //     "src/01-process-objects.ts", // path to ur file
 //     "arg1(custom argument)",
 // ]
+// console.log(process.argv);
+// [
+//   'node_modules/node/bin/node',
+//   'src/01-process-objects.ts'
+// ]
 
 const command = process.argv[2] ?? "start";
 
