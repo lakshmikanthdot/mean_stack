@@ -28,7 +28,7 @@ const nodeEnv = process.env.NODE_ENV ?? "development";
 //   'src/01-process-objects.ts'
 // ]
 
-const command = process.argv[2] ?? "start";
+const command = process.argv[2] ?? "start"; // custom argument
 
 // fail flag
 // crash flag
