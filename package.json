@@ -8,6 +8,7 @@
     "build": "tsc",
     "01" : "tsx watch src/01-process-objects.ts",
     "02" : "tsx watch src/02-crypto-module.ts",
+    "03" : "tsx watch src/03-os-module.ts",
     "dev": "tsx watch index.ts",
     "migration": "",
     "unit" : "",
