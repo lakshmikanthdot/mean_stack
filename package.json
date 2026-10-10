@@ -12,6 +12,7 @@
     "04" : "tsx watch src/04-path-module.ts",
     "05" : "tsx watch src/05-timer-module.ts",
     "06" : "tsx watch src/06-callback-promises-async-await-module.ts",
+    "07" : "tsx watch src/07-fs-module.ts",
     "dev": "tsx watch index.ts",
     "migration": "",
     "unit" : "",
