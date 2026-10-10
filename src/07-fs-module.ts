@@ -40,15 +40,50 @@ type FileResult = {
 // high traffic apis
 // background jobs
 
-// sync example
-function ensureDemoFolderExists(): void {
-  if (!fs.existsSync(DEMO_FOLDER_PATH)) {
-    fs.mkdirSync(DEMO_FOLDER_PATH, { recursive: true });
-    // create the full folder path if path is not exists
-    // if parent folder is not exits still we can create the full path using recursive:true
-  }
+// check if the demo folder exists or not, if not create it
+// function ensureDemoFolderExists(): void {
+//   if (!fs.existsSync(DEMO_FOLDER_PATH)) {
+//     fs.mkdirSync(DEMO_FOLDER_PATH, { recursive: true });
+//     // create the full folder path if path is not exists
+//     // if parent folder is not exits still we can create the full path using recursive:true
+//   }
+// }
+
+async function ensureDemoFolderExists(): Promise<void> {
+  // APPROACH 1: Using fsPromises.mkdir (Active)
+  // With { recursive: true }, fsPromises.mkdir automatically skips creation
+  // if the path already exists, without throwing an EEXIST error.
+
+  await fsPromises.mkdir(DEMO_FOLDER_PATH, { recursive: true });
+
+  // APPROACH 2: Using fs.mkdir (Callback API wrapped in a Promise)
+
+  // await new Promise<void>((resolve, reject) => {
+  //   fs.mkdir(DEMO_FOLDER_PATH, { recursive: true }, (err) => {
+  //     if (err) return reject(err);
+  //     resolve();
+  //   });
+  // });
+
+  // APPROACH 3: Explicit check using fs.exists (Legacy Callback API)
+  // Note: fs.exists is deprecated in Node.js because checking existence before
+  // an operation introduces race conditions (TOCTOU).
+
+  // await new Promise<void>((resolve, reject) => {
+  //   fs.exists(DEMO_FOLDER_PATH, (exists) => {
+  //     if (!exists) {
+  //       fs.mkdir(DEMO_FOLDER_PATH, { recursive: true }, (err) => {
+  //         if (err) return reject(err);
+  //         resolve();
+  //       });
+  //     } else {
+  //       resolve();
+  //     }
+  //   });
+  // });
 }
 
+// sync example
 function runSyncExample(): FileResult {
   // write content to a file
   fs.writeFileSync(
