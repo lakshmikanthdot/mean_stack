@@ -15,6 +15,7 @@
     "07" : "tsx watch src/07-fs-module.ts",
     "08" : "tsx watch src/08-buffers-module.ts",
     "09" : "tsx watch src/09-url-module.ts",
+    "10" : "tsx watch src/10.event-emitter.ts",
     "dev": "tsx watch index.ts",
     "migration": "",
     "unit" : "",
