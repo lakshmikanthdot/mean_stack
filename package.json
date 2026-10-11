@@ -21,6 +21,7 @@
     "13" : "tsx src/level-2/02-routing.ts",
     "14" : "tsx src/level-2/03-reading-body.ts",
     "15" : "tsx src/level-2/04-json-response.ts",
+    "16" : "tsx src/level-2/05-external-api-calls.ts",
     "dev": "tsx watch index.ts",
     "migration": "",
     "unit" : "",
