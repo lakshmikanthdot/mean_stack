@@ -17,6 +17,7 @@
     "09" : "tsx watch src/level-1/09-url-module.ts",
     "10" : "tsx watch src/level-1/10-event-emitter.ts",
     "11" : "tsx watch src/level-1/11-streams-module.ts",
+    "12" : "tsx src/level-2/01-basic-http-server.ts",
     "dev": "tsx watch index.ts",
     "migration": "",
     "unit" : "",
