@@ -77,3 +77,9 @@ main();
 // received chunk NODE.JS
 // received chunk STREAMS
 // stream completed
+
+// streams work with chunks
+// readable streams -> produced the data in chunks
+// writable streams -> consume the data in chunks
+// transform streams -> modilfying the data in middle of the stream before it was passed to the writable stream
+// pipeline -> combine all your streams together and handle the error in one place
