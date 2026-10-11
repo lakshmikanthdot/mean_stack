@@ -19,6 +19,7 @@
     "11" : "tsx watch src/level-1/11-streams-module.ts",
     "12" : "tsx src/level-2/01-basic-http-server.ts",
     "13" : "tsx src/level-2/02-routing.ts",
+    "14" : "tsx src/level-2/03-reading-body.ts",
     "dev": "tsx watch index.ts",
     "migration": "",
     "unit" : "",
