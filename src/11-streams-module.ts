@@ -42,10 +42,9 @@ const readableStream = Readable.from([
 
 // callback(error, result) -> result is the transformed data
 const upperCaseTransform = new Transform({
-  //   transform(chunkData, encodingData, callbackFunction) {
-  transform(chunk, encoding, callback) {
-    const text = chunk.toString();
-    callback(null, text.toUpperCase());
+  transform(chunkData, encodingData, callbackFunction) {
+    const text = chunkData.toString();
+    callbackFunction(null, text.toUpperCase());
   },
 });
 
@@ -53,10 +52,9 @@ const upperCaseTransform = new Transform({
 // it possible to to send the data http server also
 // upload the data to cloud also
 const writableStream = new Writable({
-  //   write(chunkDataWrite, encoding, callbackFunctionWrite) {
-  write(chunk, encoding, callback) {
-    console.log("received chunk", chunk.toString());
-    callback(); // tell node to send to next one
+  write(chunkDataWrite, encodingData, callbackFunctionWrite) {
+    console.log("received chunk", chunkDataWrite.toString());
+    callbackFunctionWrite(); // tell node to send to next one
   },
 });
 
@@ -73,3 +71,9 @@ async function main(): Promise<void> {
   }
 }
 main();
+
+// received chunk HELLO
+// received chunk FROM
+// received chunk NODE.JS
+// received chunk STREAMS
+// stream completed
