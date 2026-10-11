@@ -57,3 +57,5 @@ function runApp(): void {
   }
 }
 runApp();
+// npm run 01 -- start --fail
+// npm run 01 -- start --crash
