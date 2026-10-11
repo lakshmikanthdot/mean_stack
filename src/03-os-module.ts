@@ -3,7 +3,8 @@
 // memory information
 // home/temp directory information
 import * as os from "node:os";
-// console.log("CPU Information: ", os); // check the information about the current operating system ( os Object)
+// console.log("CPU Information: ", os);
+// check the information about the current operating system ( os Object)
 
 function runOSDemo(): void {
   console.log("platform", os.platform());
