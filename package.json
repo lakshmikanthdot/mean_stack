@@ -20,6 +20,7 @@
     "12" : "tsx src/level-2/01-basic-http-server.ts",
     "13" : "tsx src/level-2/02-routing.ts",
     "14" : "tsx src/level-2/03-reading-body.ts",
+    "15" : "tsx src/level-2/04-json-response.ts",
     "dev": "tsx watch index.ts",
     "migration": "",
     "unit" : "",
