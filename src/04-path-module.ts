@@ -31,7 +31,8 @@ const uploadFilePath = path.join(
   userId,
   originalName,
 );
-console.log("uploadFilePath : ", uploadFilePath); // /users/lucky/Desktop/projects/uploads/users/42/profile.photo.png
+console.log("uploadFilePath : ", uploadFilePath);
+// /users/lucky/Desktop/projects/uploads/users/42/profile.photo.png
 // sequence of path segments is important, if we change the order of the segments then the file path will be different
 
 // properties from the path module
@@ -46,5 +47,5 @@ console.log("fileExtension : ", fileExtension); // .png
 
 // path.dirname() : gives the directory part of the path
 const parentFolder = path.dirname(uploadFilePath); // gives the directory part of the path
-console.log("parentFolder : ", parentFolder); // /users/lucky/Desktop/projects/uploads/users/42
-// test commit streak2
+console.log("parentFolder : ", parentFolder);
+// /users/lucky/Desktop/projects/uploads/users/42
